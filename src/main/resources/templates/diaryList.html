@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="/css/diaryList.css">
+    <title>Document</title>
+  </head>
+  <body>
+      <div class="wrap">
+        <div class="backBar center">
+          <button type="button">
+            <i class="fa-solid fa-angle-left"></i>
+          </button>
+          <h1>{headText}</h1>
+          <button type="button">
+            <i class="fa-solid fa-angle-right"></i>
+          </button>
+        </div>
+        <div class="main">
+          <div class="menu">
+            <div class="count ko">
+              📚일기
+              <span class="diaryCoutn"> 1 </span>개
+            </div>
+            <div class="sort">
+              <select class="ko">
+                <option class="ko">최신순</option>
+                <option class="ko">오래된순</option>
+              </select>
+            </div>
+          </div>
+          <div class="list">
+            <div class="item">
+              <div class="top">
+                <a href="/diary/">
+                  <div class="list-emotion" ></div>
+                  <div class="dateBox">
+                    <p class="date ko">
+                      2022년 11월 15일
+                      <span class="DayOfWeek ko"
+                      >
+                        화요일
+                      </span>
+                    </p>
+                    <p class="time ko">시간</p>
+                  </div>
+                </a>
+                <div class="btn">
+                  <button>
+                    <FontAwesomeIcon icon={faCommentDots} class="search" />
+                  </button>
+                  <div>
+                    <ul>
+                      <li class="ko">
+                        <Link to="/edit/">수정하기</Link>
+                      </li>
+                      <li class="ko">
+                        <span>삭제하기</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="divLine" ></div>
+              <div class="bottom">
+                <a link="/diary/">
+                  <div class="contents">
+                    <p class="ko">내용</p>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="btnWrap">
+              <div class="btnBox">
+                <button type="button" class="writeBtn">
+                  <a href="/diary/post" class="ko">
+                    새 일기작성
+                  </a>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </body>
+</html>

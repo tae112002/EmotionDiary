@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+      <div class="wrap">
+        <div class="backBar">
+          <button type="button">
+            <h1>
+              <FontAwesomeIcon icon={faAngleLeft} class="search" />
+            </h1>
+          </button>
+          <div class="barTitle">
+            <h1>MyPage</h1>
+          </div>
+        </div>
+        <div class="container">
+          <div class="JoinBox">
+            <form method="post" onSubmit={handleSubmit} autoComplete="off">
+              <div class="joinItem">
+                <span>Current Password</span>
+                <input type="password"></input>
+              </div>
+              <div class="joinItem">
+                <span>Password</span>
+                <input type="password" value={pwd}></input>
+              </div>
+              <div class="joinItem">
+                <span>Password Confirm</span>
+                <input type="password"></input>
+              </div>
+              <div class="joinItem">
+                <span>Name</span>
+                <input type="text" value={name}></input>
+              </div>
+              <div class="joinItem">
+                <span>E-Mail</span>
+                <input type="text" value={email}></input>
+              </div>
+              <button type="submit" class="joinBtn">
+                완료
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </body>
+</html>

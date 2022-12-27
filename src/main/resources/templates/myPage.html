@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+      <div className="wrap">
+        <div className="backBar">
+          <button type="button" onClick={() => navigate(-1)}>
+            <h1>
+              <FontAwesomeIcon icon={faAngleLeft} className="search" />
+            </h1>
+          </button>
+          <div className="barTitle">
+            <h1>MyPage</h1>
+          </div>
+        </div>
+        <div className="container">
+          <div className="JoinBox">
+            <div className="joinItem">
+              <span>Name</span>
+              <input type="text" value={name}></input>
+            </div>
+            <div className="joinItem">
+              <span>E-Mail</span>
+              <input type="text" value={email}></input>
+            </div>
+            <div className="joinItem">
+              <span>Password</span>
+              <input type="password" value={pwd}></input>
+            </div>
+            <button type="submit" className="joinBtn">
+              <Link to="/myPage/edit">수정하기</Link>
+            </button>
+          </div>
+        </div>
+      </div>
+    </body>
+</html>

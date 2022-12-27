@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" th:href="@{/css/login.css}" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="container">
+        <div class="loginLogo">
+          <h1>Emotional Diary</h1>
+        </div>
+        <div class="loginBox">
+          <form method="post" autocomplete="off" action="/login">
+            <div class="loginItem">
+              <span>ID</span>
+              <input type="text" name="id" />
+            </div>
+            <div class="loginItem">
+              <span>PASSWORD</span>
+              <input type="password" name="pwd" />
+            </div>
+            <div class="linkWarp">
+              <a href="/">Forgot your Password</a>
+              <a href="/join">Sign up</a>
+            </div>
+            <button type="submit" class="loginBtn">LOGIN</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

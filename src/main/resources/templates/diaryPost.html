@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="/css/diaryPost.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="backBar">
+        <button type="button">
+          <h1>
+            <i class="fa-solid fa-angle-left"></i>
+          </h1>
+        </button>
+        <div class="barTitle">
+          <h1 class="ko">새 일기쓰기</h1>
+        </div>
+      </div>
+      <div class="main">
+        <form method="post" onSubmit="{handleSubmit}" autocomplete="off">
+          <div class="items-wrap">
+            <div class="dateWrap">
+              <div class="title">
+                <h4 class="ko">📆오늘은?</h4>
+              </div>
+              <div class="cl">
+                <input type="date" name="" id="" />
+              </div>
+            </div>
+          </div>
+          <div class="items-wrap">
+            <h4 class="ko">👀오늘의 감정</h4>
+            <div class="moodWrap">
+              <div class="moodItem">
+                <div
+                  id="happy"
+                  class="img nonClick"
+                ></div>
+                <p class="ko">행복</p>
+              </div>
+              <div class="moodItem">
+                <div
+                  id="good"
+                  class="img nonClick"
+                ></div>
+                <p class="ko">좋음</p>
+              </div>
+              <div class="moodItem">
+                <div id="soso" class="img click"></div>
+                <p class="ko">보통</p>
+              </div>
+              <div class="moodItem">
+                <div
+                  id="bad"
+                  class="img nonClick"
+                ></div>
+                <p class="ko">나쁨</p>
+              </div>
+              <div class="moodItem">
+                <div
+                  id="angry"
+                  class="img nonClick"
+                ></div>
+                <p class="ko">화남</p>
+              </div>
+            </div>
+          </div>
+          <div class="items-wrap">
+            <div class="uploadWrap">
+              <h4 class="ko">📝오늘의 일기</h4>
+              <div class="imgUpload">
+                <label for="upload-file">📁 이미지 업로드</label>
+                <input type="file" id="upload-file" />
+              </div>
+            </div>
+            <div class="preview"></div>
+          </div>
+          <div class="items-wrap">
+            <textarea placeholder="오늘의 기분은 어땠나요?"></textarea>
+          </div>
+          <div class="sumbitBtn">
+            <button type="submit">작성완료</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+  <script src="/js/diaryPost.js"></script>
+</html>

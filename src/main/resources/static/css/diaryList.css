@@ -1,0 +1,209 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR&family=Roboto&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+p,
+span {
+  font-size: 16px;
+}
+button,
+input,
+select,
+option {
+  border: 0;
+  cursor: pointer;
+  background-color: white;
+  outline: none;
+  font-size: 16px;
+}
+textarea {
+  border: 0;
+  cursor: text;
+  background-color: white;
+  outline: none;
+  font-size: 16px;
+}
+a {
+  text-decoration: none;
+  color: black;
+  font-size: 16px;
+}
+li {
+  list-style: none;
+  font-size: 16px;
+}
+
+body {
+  background-color: #f6f6f6;
+  font-family: "Roboto", sans-serif;
+}
+
+.ko {
+  font-family: "Noto Sans KR", sans-serif;
+}
+
+@media (min-width: 680px) {
+  .wrap {
+    background-color: white;
+    width: 680px;
+    min-height: 100vh;
+    margin: 0 auto;
+  }
+}
+
+.main {
+  width: 90%;
+  margin: 0 auto;
+}
+.backBar {
+  display: flex;
+  width: 90%;
+  margin: 0 auto;
+  padding: 20px 0;
+  border-bottom: 1px solid #666666;
+}
+.backBar button {
+  background-color: #f5f5f5;
+  height: 40px;
+  width: 44px;
+  border-radius: 10px;
+  color: black;
+}
+.barTitle {
+  text-align: center;
+  width: 100%;
+}
+.center {
+  justify-content: space-between;
+}
+.menu {
+  margin: 20px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.sort select {
+  background-color: #f5f5f5;
+  padding: 4px 12px;
+  border-radius: 10px;
+}
+.list {
+  padding-bottom: 60px;
+}
+.item {
+  -moz-box-shadow: 0 0 3px 3px #e2e2e2;
+  -webkit-box-shadow: 0 0 3px 3px#e2e2e2;
+  box-shadow: 0 0 3px 3px #e2e2e2;
+  border: 1px solid #e2e2e2;
+  border-radius: 10px;
+  padding: 16px 12px;
+  margin-bottom: 20px;
+}
+.top {
+  display: flex;
+  justify-content: space-between;
+}
+.top a {
+  display: inline-flex;
+}
+.dateBox {
+  width: 100%;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.dateBox p {
+  width: 100%;
+}
+.date {
+  font-weight: bold;
+}
+.time {
+  color: #666;
+  font-size: 14px;
+}
+.btn {
+  display: flex;
+  width: 70px;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+}
+.btn button {
+  font-size: 30px;
+}
+.toggleBtn {
+  position: absolute;
+  top: 50px;
+  right: -40px;
+}
+.show-menu {
+  display: block;
+  position: absolute;
+}
+.hide-menu {
+  display: none;
+  transition: 1s;
+}
+li {
+  height: 50px;
+  width: 150px;
+  text-align: center;
+  line-height: 50px;
+  background-color: white;
+  border: 1px solid #666;
+  cursor: pointer;
+}
+li:first-child {
+  border-bottom: none;
+}
+li span {
+  color: red;
+}
+.list-emotion {
+  background-image: url("../images/happy.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 70px;
+  height: 70px;
+}
+.divLine {
+  border-bottom: 1px solid #e2e2e2;
+  width: 100%;
+  margin: 10px 0;
+}
+.btnWrap {
+  margin: 15px 0;
+}
+.btnBox {
+  position: fixed;
+  bottom: 16px;
+  width: 610px;
+}
+.btnBox button {
+  width: 100%;
+  background-color: #1f64ff;
+  height: 50px;
+  font-size: 16px;
+  border-radius: 10px;
+}
+.btnBox button a {
+  color: white;
+  display: inline-flex;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+}
+.diaryCount {
+  color: "blue";
+  font-weight: "bold";
+}
+.DayOfWeek {
+  color: "darkBlue";
+  margin-left: "5px";
+}
