@@ -138,6 +138,7 @@ body {
 .uploadWrap {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 .imgUpload {
   width: 150px;
@@ -160,7 +161,18 @@ body {
   clip: rect(0, 0, 0, 0);
   border: 0;
 }
-.preview img {
+.preview-box{
+  width: 100%;
+  text-align: center;
+}
+.none{
+  display: none;
+}
+.block{
+  display: block;
+}
+.preview-box img {
+  margin-top: 10px;
   width: 100%;
 }
 textarea {
@@ -178,4 +190,5 @@ textarea {
   width: 100%;
   height: 50px;
   color: white;
+  margin-bottom: 27px;
 }

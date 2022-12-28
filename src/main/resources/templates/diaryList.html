@@ -4,19 +4,21 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-    <link rel="stylesheet" href="/css/diaryList.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" th:href="@{/css/diaryList.css}">
     <title>Document</title>
   </head>
-  <body>
+  <body onload="build()">
       <div class="wrap">
+        <div class="logoutBox">
+          <a href="#" >로그아웃</a>
+        </div>
         <div class="backBar center">
-          <button type="button">
+          <button type="button" onclick="beforem()" id="before">
             <i class="fa-solid fa-angle-left"></i>
           </button>
-          <h1>{headText}</h1>
-          <button type="button">
+          <h1 id="yearmonth"></h1>
+          <button type="button" onclick="nextm()" id="next">
             <i class="fa-solid fa-angle-right"></i>
           </button>
         </div>
@@ -51,9 +53,9 @@
                 </a>
                 <div class="btn">
                   <button>
-                    <FontAwesomeIcon icon={faCommentDots} class="search" />
+                    <i class="fa-regular fa-comment-dots"></i>
                   </button>
-                  <div>
+                  <div class="toggleBtn">
                     <ul>
                       <li class="ko">
                         <Link to="/edit/">수정하기</Link>
@@ -86,5 +88,6 @@
           </div>
         </div>
       </div>
+      <script th:src="@{/js/diaryList.js}"></script>
     </body>
 </html>

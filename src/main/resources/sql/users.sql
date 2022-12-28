@@ -5,9 +5,7 @@ create table members(
     id bigint not null auto_increment primary key,
     userid varchar(50) not null,
     password varchar(500) not null,
-    username varchar(20) not null,
-    useremail varchar(100) not null,
-    role varchar(10) default 'USER'
+    useremail varchar(100) not null
 );
 -- insert into members values(null, 'sdf', 'sdf', 'sdf', default);
 create table diarypost(

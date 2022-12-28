@@ -40,10 +40,12 @@
           </div>
           <div class="items-wrap">
             <h4 class="ko">👀오늘의 감정</h4>
+            <input type="hidden" id="emotion" value="soso">
             <div class="moodWrap">
               <div class="moodItem">
                 <div
                   id="happy"
+                  value="행복"
                   class="img nonClick"
                 ></div>
                 <p class="ko">행복</p>
@@ -80,10 +82,12 @@
               <h4 class="ko">📝오늘의 일기</h4>
               <div class="imgUpload">
                 <label for="upload-file">📁 이미지 업로드</label>
-                <input type="file" id="upload-file" />
+                <input type="file" id="upload-file" onchange="readURL(this)"/>
               </div>
             </div>
-            <div class="preview"></div>
+            <div class="preview-box none" id="preview-box">
+              <img class="preview" id="preview"/>
+            </div>
           </div>
           <div class="items-wrap">
             <textarea placeholder="오늘의 기분은 어땠나요?"></textarea>
